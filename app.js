@@ -30,3 +30,10 @@ close_modal.addEventListener('click', closeModal);
 
 //Closes modal window when clicking outside
 overlay.addEventListener('click', closeModal);
+
+//ESC Keypress Event - using addEvenListener on the document as a global event
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+})
